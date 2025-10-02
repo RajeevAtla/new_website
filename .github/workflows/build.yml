@@ -18,6 +18,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: |
-        cargo install
+        cargo install cargo-binstall
+        cargo binstall dioxus-cli
         dx build --platform web --release
         
