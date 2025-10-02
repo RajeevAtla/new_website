@@ -16,10 +16,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Install prereqs and build
+
+    
+    - name: Install prereqs
+      uses: taiki-e/cache-cargo-install-action@v2
+      with:
+        tool: dioxus-cli
+
+    - name: Build
       run: |
-        cargo install cargo-binstall
-        cargo binstall dioxus-cli
         dx build --platform web --release
         ls -r
         
