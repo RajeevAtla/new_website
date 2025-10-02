@@ -35,6 +35,10 @@ jobs:
         path: target/
 
   deploy:
+    permissions:
+      pages: write
+      id-toke: write
+  
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
