@@ -21,6 +21,7 @@ jobs:
         cargo install cargo-binstall
         cargo binstall dioxus-cli
         dx build --platform web --release
+        ls -r
         
     - name: Upload static files as artifact
       id: deployment
