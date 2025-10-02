@@ -16,9 +16,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
+    - name: Install prereqs and build
       run: |
         cargo install cargo-binstall
         cargo binstall dioxus-cli
         dx build --platform web --release
         
+    - name: Upload static files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: test/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
