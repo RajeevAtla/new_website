@@ -32,7 +32,7 @@ jobs:
       id: deployment
       uses: actions/upload-pages-artifact@v3
       with:
-        path: target/
+        path: target/dx/new_website/release/web/public
 
   deploy:
     permissions:
