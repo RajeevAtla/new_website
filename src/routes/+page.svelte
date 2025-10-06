@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { PageSection, projects, siteConfig } from '$lib';
 
 	const featured = projects.slice(0, 2);
 	const { title, tagline, description, socials } = siteConfig;
+
+	const resolve = (path: string) => `${base}${path}`;
 </script>
 
 <section class="mx-auto max-w-5xl px-6 pb-12 pt-20">
@@ -52,7 +55,7 @@
 		{/each}
 	</div>
 	<p class="mt-8 text-sm text-secondary/70">
-		Curious for more? <a class="underline decoration-dotted underline-offset-4 hover:text-primary" href="/projects">Browse the full projects archive.</a>
+		Curious for more? <a class="underline decoration-dotted underline-offset-4 hover:text-primary" href={resolve('/projects')}>Browse the full projects archive.</a>
 	</p>
 </PageSection>
 
@@ -75,7 +78,7 @@
 	title="Let's collaborate"
 	description="Share details about your roadmap or research direction. I reply quickly to thoughtful inquiries."
 >
-	<a class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-background transition hover:bg-primary/90" href="mailto:{siteConfig.email}">
+	<a class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-background transition hover:bg-primary/90" href={`mailto:${siteConfig.email}`}>
 		Start a conversation
 		<span aria-hidden="true">-></span>
 	</a>
