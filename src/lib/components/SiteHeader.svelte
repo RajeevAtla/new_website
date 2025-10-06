@@ -4,7 +4,7 @@
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import { navLinks, siteConfig } from '$lib/config/site';
 
-	const { title, tagline } = siteConfig;
+	const { title } = siteConfig;
 
 	const resolveHref = (href: string) => {
 		if (/^https?:\/\//.test(href) || href.startsWith('mailto:')) {
@@ -26,33 +26,69 @@
 		}
 		return pathname || '/';
 	})();
+
+	let mobileOpen = false;
+	const toggleMobile = () => (mobileOpen = !mobileOpen);
+	const closeMobile = () => (mobileOpen = false);
 </script>
 
-<header class="border-b border-surface/40 bg-surface/30 backdrop-blur">
-	<div class="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
-		<a href={resolveHref('/')} class="block">
-			<p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary/70">{tagline}</p>
-			<h1 class="text-2xl font-semibold text-primary transition hover:text-primary/80">{title}</h1>
+<header class="border-b bg-base-100/90 backdrop-blur">
+	<div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
+		<a href={resolveHref('/')} class="text-lg font-semibold text-primary">
+			{title}
 		</a>
-		<div class="flex items-center gap-4">
-			<nav>
-				<ul class="flex flex-wrap items-center gap-3 text-sm font-medium">
-					{#each navLinks as link}
-						{#key link.href}
-							<li>
-								<a
-									class="rounded-full px-4 py-2 transition hover:bg-primary/10 hover:text-primary"
-									class:font-semibold={currentPath === link.href}
-									href={resolveHref(link.href)}
-								>
-									{link.title}
-								</a>
-							</li>
-						{/key}
-					{/each}
-				</ul>
-			</nav>
+		<nav class="hidden items-center gap-2 text-sm font-medium sm:flex">
+			{#each navLinks as link}
+				<a
+					href={resolveHref(link.href)}
+					class={`btn btn-ghost btn-sm ${currentPath === link.href ? 'btn-active text-primary' : 'text-base-content/70 hover:text-primary'}`}
+				>
+					{link.title}
+				</a>
+			{/each}
 			<ThemeToggle />
+		</nav>
+		<div class="flex items-center gap-2 sm:hidden">
+			<ThemeToggle />
+			<button
+				type="button"
+				class="btn btn-ghost btn-sm"
+				on:click={toggleMobile}
+				aria-expanded={mobileOpen}
+				aria-controls="mobile-nav"
+			>
+				<span class="text-xl">☰</span>
+				<span class="sr-only">Toggle navigation</span>
+			</button>
 		</div>
 	</div>
+	{#if mobileOpen}
+		<ul id="mobile-nav" class="mx-auto mt-2 w-full max-w-5xl space-y-2 px-4 pb-4 text-sm">
+			{#each navLinks as link}
+				<li>
+					<a
+						href={resolveHref(link.href)}
+						class={`btn btn-ghost btn-sm w-full justify-start ${currentPath === link.href ? 'btn-active text-primary' : ''}`}
+						on:click={closeMobile}
+					>
+						{link.title}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
 </header>
+
+<style>
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+</style>

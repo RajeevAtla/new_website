@@ -2,20 +2,21 @@
 	import { theme, toggleTheme } from '$lib/stores/theme';
 	import type { Theme } from '$lib/stores/theme';
 
-	let currentTheme: Theme = 'dark';
+	let currentTheme: Theme = 'rajevdark';
 	$: currentTheme = $theme;
 	$:
-	label = currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+	label = currentTheme === 'rajevdark' ? 'Switch to light mode' : 'Switch to dark mode';
 </script>
 
 <button
 	type="button"
-	class="rounded-full border border-primary/40 bg-surface/60 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-primary/10"
+	class="btn btn-ghost btn-sm gap-2"
 	on:click={toggleTheme}
-	aria-pressed={currentTheme === 'dark'}
+	aria-pressed={currentTheme === 'rajevdark'}
 	title={label}
 >
-	<span aria-hidden="true">{currentTheme === 'dark' ? 'Light' : 'Dark'}</span>
+	<span aria-hidden="true">{currentTheme === 'rajevdark' ? '🌞' : '🌙'}</span>
+	<span>{currentTheme === 'rajevdark' ? 'Light' : 'Dark'}</span>
 	<span class="sr-only">{label}</span>
 </button>
 

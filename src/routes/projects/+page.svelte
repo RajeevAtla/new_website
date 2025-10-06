@@ -7,22 +7,22 @@
 	title="Selected work and experiments"
 	description="Machine learning research, data infrastructure, and product experiments that capture how I build reliable AI systems."
 >
-	<div class="space-y-6">
+	<div class="space-y-4">
 		{#each projects as project}
-			<article class="rounded-2xl border border-surface/40 bg-surface/60 p-6 shadow-lg shadow-black/10">
+			<article class="space-y-3 rounded-xl border border-base-200 bg-base-100 p-5">
 				<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-					<h3 class="text-2xl font-semibold text-primary">{project.title}</h3>
-					<p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary/70">{project.period}</p>
+					<h3 class="text-xl font-semibold text-primary">{project.title}</h3>
+					<p class="text-xs uppercase tracking-[0.2em] text-primary/70">{project.period}</p>
 				</div>
-				<p class="mt-3 text-secondary">{project.summary}</p>
-				<ul class="mt-4 flex flex-wrap gap-2 text-xs text-secondary/70">
+				<p class="text-sm text-base-content/80">{project.summary}</p>
+				<div class="flex flex-wrap gap-2 text-xs text-base-content/60">
 					{#each project.tags as tag}
-						<li class="rounded-full border border-primary/20 px-3 py-1">{tag}</li>
+						<span class="rounded-full border border-base-200 px-3 py-1">{tag}</span>
 					{/each}
-				</ul>
-				<div class="mt-6 flex flex-wrap gap-3 text-sm font-medium">
+				</div>
+				<div class="flex flex-wrap gap-3 text-sm font-medium">
 					{#each project.links as link}
-						<a class="text-primary transition hover:text-primary/70" href={link.href} target="_blank" rel="noopener">{link.title}</a>
+						<a class="link" href={link.href} target="_blank" rel="noopener">{link.title}</a>
 					{/each}
 				</div>
 			</article>
