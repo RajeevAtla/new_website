@@ -43,6 +43,9 @@ Visit the printed localhost URL to view the site. Edits to Svelte components, Ta
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/build.yml`) installs dependencies, sets the correct `BASE_PATH`, runs the type checks, and builds the static site. The `build/` output is published to GitHub Pages automatically on pushes to `main`.
+GitHub Actions (`.github/workflows/build.yml`) installs dependencies, sets the correct `BASE_PATH`, 
+runs the type checks, 
+and builds the static site. 
+The `build/` output is published to GitHub Pages automatically on pushes to `main`.
 
 If you fork or rename the repository, update the environment variables in the workflow or add a `static/CNAME` file for a custom domain.
