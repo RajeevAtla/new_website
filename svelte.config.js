@@ -13,8 +13,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: dev ? '' : basePath,
-			assets: dev ? '' : basePath
+			base: dev ? '' : basePath
 		},
 		prerender: {
 			entries: ['*']
