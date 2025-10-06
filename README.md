@@ -1,45 +1,48 @@
-# Personal SvelteKit website
+# Personal Website (new)
 
-A polished, content-first personal site built with SvelteKit and Tailwind CSS. It ships as a fully static bundle, so you can deploy it to GitHub Pages with zero backend setup.
+This repository contains the source code for my personal site, built with SvelteKit and Tailwind CSS.
 
-## Local development (PowerShell 7.6)
+## Features
 
-```powershell
+- Fully static build served via GitHub Pages using `@sveltejs/adapter-static`
+- Home, About, Projects, and Contact pages driven by structured data in `src/lib/data`
+- Global layout with a light/dark theme toggle that persists the user's preference
+- Reusable UI primitives (`SiteHeader`, `PageSection`, `SiteFooter`) for consistent styling
+- Tailwind v4 design tokens and gradients configured in `src/app.css`
+
+## Tech Stack
+
+- SvelteKit 2
+- Tailwind CSS v4 (via `@tailwindcss/vite`)
+- TypeScript
+- GitHub Actions for automated builds and deployments
+
+## Getting Started
+
+```bash
 npm install
 npm run dev
 ```
 
-The dev command prints a local URL. Hold Ctrl and click it in the terminal to open the site in your browser. Tailwind class changes and Svelte edits hot-reload instantly.
+Visit the printed localhost URL to view the site. Edits to Svelte components, Tailwind classes, or data files hot-reload immediately.
 
-## Project structure
+## Project Structure
 
-- `src/lib/config/site.ts` stores global metadata (name, tagline, email, links) and navigation items.
-- `src/lib/data/*.ts` holds structured content for projects, experience, and skills.
-- `src/routes` contains page components (`/`, `/about`, `/projects`, `/contact`) that render the content using shared UI primitives.
-- `src/lib/components` bundles reusable layout pieces such as the header, footer, and section wrapper.
+- `src/lib/config/site.ts` - Global metadata (name, tagline, socials, contact email)
+- `src/lib/data` - Structured content for projects, experience, and skills
+- `src/lib/components` - Shared UI components and the theme toggle
+- `src/routes` - Page components for `/`, `/about`, `/projects`, and `/contact`
+- `src/lib/stores/theme.ts` - Handles light/dark mode persistence and system preference detection
 
-## Editing content
+## Useful Commands
 
-1. Update `siteConfig` in `src/lib/config/site.ts` with your details (name, socials, contact email).
-2. Tweak projects and experience entries in `src/lib/data`. You can add or remove items; the UI adjusts automatically.
-3. Adjust copy inside the page components to reflect your tone.
-4. Tailor colors or fonts in `src/app.css` by editing the values inside the `@theme` block.
+- `npm run dev` - Start the local development server
+- `npm run check` - Run `svelte-check` with the repo's TypeScript configuration
+- `npm run build` - Produce a prerendered static build in `build/`
+- `npm run preview` - Preview the production build locally
 
-## Deploying to GitHub Pages
+## Deployment
 
-1. Push this repository to GitHub and open the **Settings -> Pages** panel.
-2. Choose the GitHub Actions source. This repository already ships with `.github/workflows/build.yml` that builds and deploys the site automatically on every push to `main`.
-3. The workflow sets the correct `BASE_PATH` for the project name and publishes the static `build` directory to the `gh-pages` environment.
-4. (Optional) If you rename the repository or want to serve the site from a custom domain, update the `BASE_PATH` environment variable in the workflow or add a `static/CNAME` file.
+GitHub Actions (`.github/workflows/build.yml`) installs dependencies, sets the correct `BASE_PATH`, runs the type checks, and builds the static site. The `build/` output is published to GitHub Pages automatically on pushes to `main`.
 
-## Handy scripts
-
-- `npm run dev` - start the dev server with hot module replacement.
-- `npm run build` - generate the prerendered static site in `build/`.
-- `npm run check` - run Svelte check with strict TypeScript settings.
-
-## Next ideas
-
-- Replace placeholder data with real case studies and link previews.
-- Add a blog or notes section by dropping Markdown files into `src/routes/blog` and parsing them with your preferred library.
-- Integrate a form service (Formspree, Netlify Forms, etc.) for the contact page once you need submissions.
+If you fork or rename the repository, update the environment variables in the workflow or add a `static/CNAME` file for a custom domain.
