@@ -1,1 +1,37 @@
 @import 'tailwindcss';
+
+@theme {
+	--color-background: #050816;
+	--color-surface: #0f172a;
+	--color-primary: #38bdf8;
+	--color-secondary: #cbd5f5;
+	--color-accent: #f472b6;
+	--font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+	--font-mono: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+	color-scheme: dark;
+	background-color: var(--color-background);
+	font-family: var(--font-sans);
+}
+
+body {
+	min-height: 100vh;
+	background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 55%),
+		radial-gradient(circle at bottom, rgba(244, 114, 182, 0.08), transparent 55%),
+		linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(5, 8, 22, 0.96));
+	color: var(--color-secondary);
+}
+
+a {
+	color: var(--color-primary);
+}
+
+a:hover {
+	color: color-mix(in srgb, var(--color-primary) 85%, white 15%);
+}
+
+main {
+	display: block;
+}
