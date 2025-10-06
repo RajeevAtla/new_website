@@ -1,12 +1,12 @@
 # Personal SvelteKit website
 
-A polished, content-first personal site built with SvelteKit, Tailwind CSS, and Bun. It ships as a fully static bundle, so you can deploy it to GitHub Pages with zero backend setup.
+A polished, content-first personal site built with SvelteKit and Tailwind CSS. It ships as a fully static bundle, so you can deploy it to GitHub Pages with zero backend setup.
 
 ## Local development (PowerShell 7.6)
 
 ```powershell
-bun install
-bun run dev
+npm install
+npm run dev
 ```
 
 The dev command prints a local URL. Hold Ctrl and click it in the terminal to open the site in your browser. Tailwind class changes and Svelte edits hot-reload instantly.
@@ -34,9 +34,9 @@ The dev command prints a local URL. Hold Ctrl and click it in the terminal to op
 
 ## Handy scripts
 
-- `bun run dev` - start the dev server with hot module replacement.
-- `bun run build` - generate the prerendered static site in `build/`.
-- `bun run check` - run Svelte check with strict TypeScript settings.
+- `npm run dev` - start the dev server with hot module replacement.
+- `npm run build` - generate the prerendered static site in `build/`.
+- `npm run check` - run Svelte check with strict TypeScript settings.
 
 ## Next ideas
 
