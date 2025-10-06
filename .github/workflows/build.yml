@@ -36,11 +36,16 @@ jobs:
             echo "BASE_PATH=/${GITHUB_REPOSITORY##*/}"
           } >> $GITHUB_ENV
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Type check
-        run: bun run check
+        run: npm run check
 
       - name: Build static site
-        run: bun run build
+        run: npm run build
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
