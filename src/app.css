@@ -4,6 +4,20 @@
 
 :root {
 	color-scheme: dark;
+	--link-color: #7dd3fc;
+	--link-hover-color: #38bdf8;
+}
+
+:root[data-theme='rajevlight'] {
+	color-scheme: light;
+	--link-color: #1d4ed8;
+	--link-hover-color: #1e40af;
+}
+
+:root[data-theme='rajevdark'] {
+	color-scheme: dark;
+	--link-color: #7dd3fc;
+	--link-hover-color: #38bdf8;
 }
 
 body {
@@ -13,13 +27,28 @@ body {
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a {
-	color: hsl(var(--p));
+a:not(.btn),
+.link {
+	color: var(--link-color);
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 4px;
 	transition: color 0.2s ease;
 }
 
-a:hover {
-	color: hsl(var(--pc));
+a:not(.btn):hover,
+.link:hover {
+	color: var(--link-hover-color);
+}
+
+a:not(.btn):focus-visible,
+.link:focus-visible {
+	outline: 2px solid var(--link-hover-color);
+	outline-offset: 2px;
+}
+
+.link {
+	text-decoration-color: currentColor;
 }
 
 main {
