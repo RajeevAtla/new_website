@@ -57,7 +57,17 @@
 				aria-expanded={mobileOpen}
 				aria-controls="mobile-nav"
 			>
-				<span class="text-xl">☰</span>
+				<span aria-hidden="true" class="inline-flex h-4 w-4 items-center justify-center">
+					{#if mobileOpen}
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+							<path d="M6.343 5.929a1 1 0 0 1 1.414 0L12 10.172l4.243-4.243a1 1 0 1 1 1.414 1.414L13.414 11.586l4.243 4.243a1 1 0 1 1-1.414 1.414L12 13l-4.243 4.243a1 1 0 0 1-1.414-1.414l4.243-4.243-4.243-4.243a1 1 0 0 1 0-1.414Z" />
+						</svg>
+					{:else}
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+							<path d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z" />
+						</svg>
+					{/if}
+				</span>
 				<span class="sr-only">Toggle navigation</span>
 			</button>
 		</div>
