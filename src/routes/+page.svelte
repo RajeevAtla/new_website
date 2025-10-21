@@ -8,6 +8,11 @@
 	const resolve = (path: string) => `${base}${path}`;
 </script>
 
+<svelte:head>
+	<title>{title} | {tagline}</title>
+	<meta name="description" content={description} />
+</svelte:head>
+
 <section class="mx-auto w-full max-w-5xl px-4 py-16">
 	<div class="space-y-6">
 		<p class="text-xs uppercase tracking-[0.3em] text-primary/70">{tagline}</p>

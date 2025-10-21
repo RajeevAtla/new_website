@@ -1,6 +1,14 @@
 <script lang="ts">
-	import { PageSection, projects } from '$lib';
+	import { PageSection, projects, siteConfig } from '$lib';
 </script>
+
+<svelte:head>
+	<title>{siteConfig.title} | Projects</title>
+	<meta
+		name="description"
+		content="Explore Rajeev Atla's portfolio of machine learning systems, data infrastructure, and AI product experiments."
+	/>
+</svelte:head>
 
 <PageSection
 	eyebrow="Projects"

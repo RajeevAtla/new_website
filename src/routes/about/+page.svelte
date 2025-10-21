@@ -2,6 +2,14 @@
 	import { experience, PageSection, skills, siteConfig } from '$lib';
 </script>
 
+<svelte:head>
+	<title>{siteConfig.title} | About</title>
+	<meta
+		name="description"
+		content="Learn about Rajeev Atla's background, Rutgers education, and the experience delivering production-grade machine learning systems."
+	/>
+</svelte:head>
+
 <PageSection
 	eyebrow="About"
 	title={`Meet the person behind ${siteConfig.title}`}

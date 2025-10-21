@@ -37,10 +37,11 @@
 		<a href={resolveHref('/')} class="text-lg font-semibold text-primary">
 			{title}
 		</a>
-		<nav class="hidden items-center gap-2 text-sm font-medium sm:flex">
+		<nav class="hidden items-center gap-2 text-sm font-medium sm:flex" aria-label="Primary">
 			{#each navLinks as link}
 				<a
 					href={resolveHref(link.href)}
+					aria-current={currentPath === link.href ? 'page' : undefined}
 					class={`btn btn-ghost btn-sm ${currentPath === link.href ? 'btn-active text-primary' : 'text-base-content/70 hover:text-primary'}`}
 				>
 					{link.title}
@@ -78,6 +79,7 @@
 				<li>
 					<a
 						href={resolveHref(link.href)}
+						aria-current={currentPath === link.href ? 'page' : undefined}
 						class={`btn btn-ghost btn-sm w-full justify-start ${currentPath === link.href ? 'btn-active text-primary' : ''}`}
 						on:click={closeMobile}
 					>

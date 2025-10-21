@@ -2,6 +2,14 @@
 	import { PageSection, siteConfig } from '$lib';
 </script>
 
+<svelte:head>
+	<title>{siteConfig.title} | Contact</title>
+	<meta
+		name="description"
+		content="Reach out to Rajeev Atla to discuss machine learning roadmaps, research collaborations, or production AI tooling."
+	/>
+</svelte:head>
+
 <PageSection
 	eyebrow="Contact"
 	title="Start a conversation"
@@ -17,10 +25,10 @@
 		</div>
 		<div class="rounded-xl border border-base-200 bg-base-100 p-5">
 			<h3 class="text-lg font-semibold text-primary">What helps</h3>
-			<ul class="mt-2 space-y-2 text-sm text-base-content/80">
-				<li>- Problem space or opportunity you're exploring</li>
-				<li>- Current stage (idea, prototype, production)</li>
-				<li>- Timelines, constraints, and teammates involved</li>
+			<ul class="mt-2 space-y-2 text-sm text-base-content/80 list-disc pl-5">
+				<li>Problem space or opportunity you're exploring</li>
+				<li>Current stage (idea, prototype, production)</li>
+				<li>Timelines, constraints, and teammates involved</li>
 			</ul>
 		</div>
 		<div class="rounded-xl border border-base-200 bg-base-100 p-5">
