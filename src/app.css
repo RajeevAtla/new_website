@@ -1,6 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+@plugin "daisyui" {
+	themes: rajevlight --default, rajevdark --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+	name: "rajevlight";
+	default: true;
+	color-scheme: light;
+
+	--color-primary: #2563eb;
+	--color-primary-content: #f8fafc;
+	--color-secondary: #7c3aed;
+	--color-accent: #f472b6;
+	--color-neutral: #1f2937;
+	--color-neutral-content: #f8fafc;
+	--color-base-100: #f4f6ff;
+	--color-base-200: #e2e8f0;
+	--color-base-300: #cbd5f5;
+	--color-base-content: #1f2937;
+}
+
+@plugin "daisyui/theme" {
+	name: "rajevdark";
+	prefersdark: true;
+	color-scheme: dark;
+
+	--color-primary: #38bdf8;
+	--color-primary-content: #041221;
+	--color-secondary: #cbd5f5;
+	--color-accent: #f472b6;
+	--color-neutral: #0f172a;
+	--color-neutral-content: #cbd5f5;
+	--color-base-100: #050816;
+	--color-base-200: #0f172a;
+	--color-base-300: #1e293b;
+	--color-base-content: #cbd5f5;
+}
 
 :root {
 	color-scheme: dark;
@@ -8,13 +45,13 @@
 	--link-hover-color: #38bdf8;
 }
 
-:root[data-theme='rajevlight'] {
+:root[data-theme="rajevlight"] {
 	color-scheme: light;
 	--link-color: #1d4ed8;
 	--link-hover-color: #1e40af;
 }
 
-:root[data-theme='rajevdark'] {
+:root[data-theme="rajevdark"] {
 	color-scheme: dark;
 	--link-color: #7dd3fc;
 	--link-hover-color: #38bdf8;
@@ -22,8 +59,8 @@
 
 body {
 	min-height: 100vh;
-	background-color: hsl(var(--b1));
-	color: hsl(var(--bc));
+	background-color: var(--color-base-100);
+	color: var(--color-base-content);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -54,4 +91,3 @@ a:not(.btn):focus-visible,
 main {
 	display: block;
 }
-
