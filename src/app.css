@@ -3,6 +3,7 @@
 
 @plugin "daisyui" {
 	themes: rajevlight --default, rajevdark --prefersdark;
+	exclude: properties, radialprogress;
 }
 
 @plugin "daisyui/theme" {
