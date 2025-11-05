@@ -13,6 +13,19 @@
       "recommended": true
     }
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true,
+      "customAtRules": ["config", "plugin", "daisyui/theme"]
+    },
+    "linter": {
+      "rules": {
+        "correctness": {
+          "noInvalidPositionAtImportRule": "off"
+        }
+      }
+    }
+  },
   "html": {
     "experimentalFullSupportEnabled": true
   }

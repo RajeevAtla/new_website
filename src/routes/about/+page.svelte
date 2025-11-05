@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PageSection, skills, siteConfig } from '$lib';
+	import { PageSection, siteConfig, skills } from '$lib';
 </script>
 
 <svelte:head>

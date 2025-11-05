@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	// biome-ignore lint/correctness/noUnusedImports: Svelte markup uses PageSection
 	import { PageSection, projects, siteConfig } from '$lib';
 
 	const featured = projects.slice(0, 2);
