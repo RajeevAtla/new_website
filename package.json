@@ -28,6 +28,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
-    "daisyui": "^5.3.10"
+    "daisyui": "^5.3.10",
+    "rollup": "^4.52.5"
   }
 }
