@@ -2,7 +2,9 @@
 @config "../tailwind.config.ts";
 
 @plugin "daisyui" {
-	themes: rajevlight --default, rajevdark --prefersdark;
+	themes:
+		rajevlight --default,
+		rajevdark --prefersdark;
 	exclude: properties, radialprogress;
 }
 
@@ -62,7 +64,9 @@ body {
 	min-height: 100vh;
 	background-color: var(--color-base-100);
 	color: var(--color-base-content);
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 }
 
 a:not(.btn),

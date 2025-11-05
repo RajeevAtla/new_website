@@ -28,8 +28,12 @@
 	})();
 
 	let mobileOpen = false;
-	const toggleMobile = () => (mobileOpen = !mobileOpen);
-	const closeMobile = () => (mobileOpen = false);
+	const toggleMobile = () => {
+		mobileOpen = !mobileOpen;
+	};
+	const closeMobile = () => {
+		mobileOpen = false;
+	};
 </script>
 
 <header class="border-b bg-base-100/90 backdrop-blur">
