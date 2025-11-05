@@ -1,29 +1,29 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
-  "vcs": {
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "formatter": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "correctness": {
-        "noUnusedImports": "off",
-        "noUnusedVariables": "off",
-        "noUnknownProperty": "off"
-      }
-    }
-  },
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
-    }
-  },
-  "html": {
-    "experimentalFullSupportEnabled": true
-  }
+	"$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
+	"vcs": {
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "off",
+				"noUnusedVariables": "off",
+				"noUnknownProperty": "off"
+			}
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"html": {
+		"experimentalFullSupportEnabled": true
+	}
 }
