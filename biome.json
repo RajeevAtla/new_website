@@ -15,15 +15,7 @@
   },
   "css": {
     "parser": {
-      "tailwindDirectives": true,
-      "customAtRules": ["config", "plugin", "daisyui/theme"]
-    },
-    "linter": {
-      "rules": {
-        "correctness": {
-          "noInvalidPositionAtImportRule": "off"
-        }
-      }
+      "tailwindDirectives": true
     }
   },
   "html": {
