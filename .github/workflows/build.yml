@@ -21,14 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: '22'
-          cache: npm
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm i
+        run: bun install
 
       - name: Configure GitHub Pages base path
         run: |
@@ -38,10 +36,10 @@ jobs:
           } >> $GITHUB_ENV
 
       - name: Type check
-        run: npm run check
+        run: bun run check
 
       - name: Build static site
-        run: npm run build
+        run: bun run build
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
