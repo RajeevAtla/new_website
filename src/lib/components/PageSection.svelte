@@ -8,7 +8,7 @@
 		children?: Snippet;
 	};
 
-	const section = $props<SectionProps>();
+	const section = $props() as SectionProps;
 </script>
 
 <section class="mx-auto w-full max-w-5xl px-4 py-12">
