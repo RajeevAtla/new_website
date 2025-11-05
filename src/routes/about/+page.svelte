@@ -48,22 +48,6 @@
 </PageSection>
 
 <PageSection
-	eyebrow="Journey"
-	title="Experience snapshot"
-	description="Highlights from recent roles delivering reliable software and machine learning systems."
->
-	<div class="space-y-4">
-		{#each experience as role}
-			<div class="rounded-xl border border-base-200 bg-base-100 p-4">
-				<p class="text-xs uppercase tracking-[0.2em] text-primary/70">{role.period}</p>
-				<p class="mt-1 text-base font-semibold text-primary">{role.title} - {role.company}</p>
-				<p class="mt-2 text-sm text-base-content/80">{role.description}</p>
-			</div>
-		{/each}
-	</div>
-</PageSection>
-
-<PageSection
 	eyebrow="Toolkit"
 	title="Skills at a glance"
 	description="The languages, frameworks, and cloud platforms I reach for when building ML solutions."
