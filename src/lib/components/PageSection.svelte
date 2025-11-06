@@ -7,7 +7,7 @@
 <section class="mx-auto w-full max-w-5xl px-4 py-12">
 	<header class="mb-8 space-y-3">
 		{#if eyebrow}
-			<span class="text-xs font-semibold uppercase tracking-[0.3em] text-primary/80">
+			<span class="text-xs font-semibold uppercase tracking-eyebrow text-primary/80">
 				{eyebrow}
 			</span>
 		{/if}

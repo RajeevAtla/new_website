@@ -15,7 +15,7 @@
 
 <section class="mx-auto w-full max-w-5xl px-4 py-16">
 	<div class="space-y-6">
-		<p class="text-xs uppercase tracking-[0.3em] text-primary/70">{tagline}</p>
+		<p class="text-xs uppercase tracking-eyebrow text-primary/70">{tagline}</p>
 		<h1 class="text-4xl font-semibold text-primary sm:text-5xl">
 			Hi, I'm {title.split(' ')[0]}. I turn research ideas into production ML systems.
 		</h1>
@@ -38,7 +38,7 @@
 	<div class="grid gap-4 md:grid-cols-2">
 		{#each featured as project}
 			<article class="space-y-3 rounded-xl border border-base-200 bg-base-100 p-5">
-				<p class="text-xs uppercase tracking-[0.2em] text-primary/70">{project.period}</p>
+				<p class="text-xs uppercase tracking-caps text-primary/70">{project.period}</p>
 				<h3 class="text-lg font-semibold text-primary">{project.title}</h3>
 				<p class="text-sm text-base-content/80">{project.summary}</p>
 				<div class="flex flex-wrap gap-2 text-xs text-base-content/60">

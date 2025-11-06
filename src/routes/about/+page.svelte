@@ -31,14 +31,14 @@
 >
 	<ul class="space-y-4 text-sm text-base-content/80">
 		<li class="rounded-xl border border-base-200 bg-base-100 p-4">
-			<p class="text-xs uppercase tracking-[0.2em] text-primary/70">2025 - Present</p>
+			<p class="text-xs uppercase tracking-caps text-primary/70">2025 - Present</p>
 			<p class="font-semibold text-base-content">MS in Computer Engineering (Machine Learning specialization)</p>
 			<p class="mt-2">
 				Coursework highlights include Reinforcement Learning, Multimodal AI, and High Performance/Distributed Computing.
 			</p>
 		</li>
 		<li class="rounded-xl border border-base-200 bg-base-100 p-4">
-			<p class="text-xs uppercase tracking-[0.2em] text-primary/70">2021 - 2025</p>
+			<p class="text-xs uppercase tracking-caps text-primary/70">2021 - 2025</p>
 			<p class="font-semibold text-base-content">BS in Computer Science, Computer Engineering, and Data Science</p>
 			<p class="mt-2">
 				Eleanor and Samuel Sneath Endowed Scholarship recipient; advanced study in AI, Distributed Deep Learning, and Statistical Learning.
@@ -55,7 +55,7 @@
 	<div class="grid gap-4 md:grid-cols-3">
 		{#each skills as category}
 			<div class="space-y-3 rounded-xl border border-base-200 bg-base-100 p-4">
-				<p class="text-xs uppercase tracking-[0.2em] text-primary/70">{category.title}</p>
+				<p class="text-xs uppercase tracking-caps text-primary/70">{category.title}</p>
 				<ul class="space-y-2 text-sm text-base-content/80">
 					{#each category.skills as skill}
 						<li>{skill}</li>
