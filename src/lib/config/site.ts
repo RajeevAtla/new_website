@@ -19,7 +19,7 @@ export const siteConfig = {
 	socials: <SocialLink[]>[
 		{ title: "GitHub", href: "https://github.com/RajeevAtla" },
 		{ title: "LinkedIn", href: "https://www.linkedin.com/in/rajeev-atla" },
-		{ title: "Website", href: "https://rajeevatla.com" },
+		{ title: "Resume", href: "https://rajeevatla.com/resume/resume.pdf" },
 		{ title: "Blog", href: "https://rajeevatla.com/blog" },
 	],
 };
