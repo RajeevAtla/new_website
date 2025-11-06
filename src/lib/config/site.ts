@@ -20,6 +20,7 @@ export const siteConfig = {
 		{ title: "GitHub", href: "https://github.com/RajeevAtla" },
 		{ title: "LinkedIn", href: "https://www.linkedin.com/in/rajeev-atla" },
 		{ title: "Website", href: "https://rajeevatla.com" },
+		{ title: "Blog", href: "https://rajeevatla.com/blog"},
 	],
 };
 
