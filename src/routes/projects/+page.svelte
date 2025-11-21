@@ -20,7 +20,6 @@
 			<article class="space-y-3 rounded-xl border border-base-200 bg-base-100 p-5">
 				<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
 					<h3 class="text-xl font-semibold text-primary">{project.title}</h3>
-					<p class="text-xs uppercase tracking-caps text-primary/70">{project.period}</p>
 				</div>
 				<p class="text-sm text-base-content/80">{project.summary}</p>
 				<div class="flex flex-wrap gap-2 text-xs text-base-content/60">
