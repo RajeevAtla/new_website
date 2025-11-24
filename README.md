@@ -1,5 +1,8 @@
 # Personal Website (new)
 
+[![Biome](https://github.com/RajeevAtla/rajeevatla.github.io/actions/workflows/biome.yml/badge.svg)](https://github.com/RajeevAtla/rajeevatla.github.io/actions/workflows/biome.yml)
+[![Build and deploy](https://github.com/RajeevAtla/rajeevatla.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/RajeevAtla/rajeevatla.github.io/actions/workflows/build.yml)
+
 This repository contains the source code for my personal site, built with SvelteKit and Tailwind CSS.
 
 ## Features
